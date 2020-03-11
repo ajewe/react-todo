@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import FirstComponent from './firstComponent';
-// import { render } from '@testing-library/react';
-// import FirstComponent from './firstComponent'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
       input: '',
-      items: []
+      items: [],
+      isClicked: false
     };
   }
 
-  // toggle = () => {
-  //   this.setState({isOn: !this.state.isOn})
-  // }
+  toggle = () => {
+    this.setState({isClicked: !this.state.isClicked})
+  }
 
   inputUpdate = event => {
     this.setState({input: event.target.value})
@@ -24,15 +23,21 @@ class App extends Component {
 
   formSubmit = event => {
     event.preventDefault()
-    console.log("THIS IS STATE***", this.state.items)
     this.setState({
       items : [...this.state.items, this.state.input], 
       input: ''
     })
   }
 
+  deleteItem = index => {
+    console.log(index)
+    this.setState(prevState => {
+      return {items: prevState.items.filter((_, i) => i !== index)}
+    })
+    console.log(this.state.items)
+  }
+
   render() {
-    console.log("***THIS IS STATE***", this.state.isOn)
     return (
     <div className="App">
       <header className="App-header">
@@ -41,7 +46,7 @@ class App extends Component {
           <input value={this.state.input} onChange={this.inputUpdate} />
           <button onClick={this.toggle}>Submit</button>
         </form>
-        <FirstComponent items={this.state.items}/>
+        <FirstComponent items={this.state.items} deleteItem={this.deleteItem}/>
       </header>
     </div>
   );
