@@ -1,11 +1,10 @@
 import React from 'react';
-import { green } from 'ansi-colors';
 
 class ListItem extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      editableItem: false,
+      editableItem: false
     };
   }
 
@@ -16,19 +15,39 @@ class ListItem extends React.Component {
   render() {
     return (
       <>
-        <li key={this.props.index}>
-          <div class="list-item"
+        <li key={this.props.index} style={{color: this.props.urgency}}>
+          <div className="list-item"
             onClick={() => this.toggleEditItem()}>
             {this.state.editableItem ?
-              <input value={this.props.item}
-                onChange={(event) => {
-                  this.props.editInput(event, this.props.index)
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    this.setState({editableItem: false})
-                  }
-                }} />
+              <form onSubmit={event => {
+                      event.preventDefault()
+                      this.setState({editableItem: false})
+                    }}>
+                <input className="inputEdit" 
+                       value={this.props.item}
+                       style={{color: this.props.urgency}}
+                       onChange={(event) => {
+                        this.props.editInput(event, this.props.index)
+                       }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          this.setState({editableItem: false})
+                        }
+                      }} />
+                  <br></br>
+                  <label className="urg-label">Urgency: </label>
+                    <select id="urgencyStatus" 
+                            name="urgencyStatus" 
+                            value={this.props.urgency}
+                            onChange={(event) => {
+                              this.props.editUrgencyInput(event, this.props.index)
+                            }}>
+                      <option value="lightgreen">Green</option>
+                      <option value="yellow">Yellow</option>
+                      <option value="red">Red</option>
+                    </select>
+                <button className="btn update-btn">Done</button>
+              </form>
               :
               this.props.item}
           </div>

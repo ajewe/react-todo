@@ -127,3 +127,21 @@ button {
   padding: 4px;
   box-shadow: 2px 5px 10px rgba(128, 128, 128, 0.411);
 } 
+
+.inputEdit {
+  background-color: purple;
+  color: white;
+  font-size: 25px;
+  font-family: 'Kalam', cursive;
+  outline: none;
+}
+
+.urg-label {
+  color: white;
+  font-size: 20px;
+}
+
+.update-btn{
+  display: inline-block;
+  margin: 0 10px;
+}

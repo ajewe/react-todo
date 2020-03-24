@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      input: '',
+      input: {todo: '', urgency: 'lightgreen'},
       items: [],
       showTaskInput: false,
     };
@@ -19,12 +19,22 @@ class App extends Component {
   }
 
   inputUpdate = event => {
-    this.setState({input: event.target.value})
+    this.setState({input: {...this.state.input, todo: event.target.value}})
+  }
+
+  urgencyInputUpdate = event => {
+    this.setState({input: {...this.state.input, urgency: event.target.value}})
   }
 
   editInput = (event, i) => {
-    const items = this.state.items.slice();
-    items[i] = event.target.value
+    const items = this.state.items.slice()
+    items[i].todo = event.target.value
+    this.setState({items: items})
+  }
+
+  editUrgencyInput = (event, i) => {
+    const items = this.state.items.slice()
+    items[i].urgency = event.target.value
     this.setState({items: items})
   }
 
@@ -32,7 +42,7 @@ class App extends Component {
     event.preventDefault()
     this.setState({
       items : [...this.state.items, this.state.input], 
-      input: '',
+      input: {todo: '', urgency: 'lightgreen'},
       showTaskInput: false,
     })
   }
@@ -57,10 +67,12 @@ class App extends Component {
             <ul>
               {this.state.items.map((item, index) => {
                 return (<ListItem
+                  key={index}
                   index={index}
-                  item={item}
+                  item={item.todo}
+                  urgency={item.urgency}
                   editInput={this.editInput}
-                  items={this.state.items} 
+                  editUrgencyInput={this.editUrgencyInput}
                   deleteItem={this.deleteItem}
                 />)
               })}
@@ -73,8 +85,10 @@ class App extends Component {
         </button>
         {this.state.showTaskInput && <ShowFormInput 
           formSubmit={this.formSubmit} 
-          input={this.state.input} 
-          inputUpdate={this.inputUpdate}/>}
+          todoInput={this.state.input.todo}
+          inputUpdate={this.inputUpdate}
+          urgencyInput={this.state.input.urgency}
+          urgencyInputUpdate={this.urgencyInputUpdate}/>}
       </div>
     </div>
   );
