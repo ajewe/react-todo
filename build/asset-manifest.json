@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "https://ajewe.github.io/react-todo/build/static/static/css/main.a11e4d6b.chunk.css",
-    "main.js": "https://ajewe.github.io/react-todo/build/static/static/js/main.c3a547e2.chunk.js",
-    "main.js.map": "https://ajewe.github.io/react-todo/build/static/static/js/main.c3a547e2.chunk.js.map",
-    "runtime-main.js": "https://ajewe.github.io/react-todo/build/static/static/js/runtime-main.f8e5da75.js",
-    "runtime-main.js.map": "https://ajewe.github.io/react-todo/build/static/static/js/runtime-main.f8e5da75.js.map",
-    "static/js/2.c5485d7a.chunk.js": "https://ajewe.github.io/react-todo/build/static/static/js/2.c5485d7a.chunk.js",
-    "static/js/2.c5485d7a.chunk.js.map": "https://ajewe.github.io/react-todo/build/static/static/js/2.c5485d7a.chunk.js.map",
-    "index.html": "https://ajewe.github.io/react-todo/build/static/index.html",
-    "precache-manifest.846b330375315d8fd23432f6f22fc775.js": "https://ajewe.github.io/react-todo/build/static/precache-manifest.846b330375315d8fd23432f6f22fc775.js",
-    "service-worker.js": "https://ajewe.github.io/react-todo/build/static/service-worker.js",
-    "static/css/main.a11e4d6b.chunk.css.map": "https://ajewe.github.io/react-todo/build/static/static/css/main.a11e4d6b.chunk.css.map",
-    "static/js/2.c5485d7a.chunk.js.LICENSE.txt": "https://ajewe.github.io/react-todo/build/static/static/js/2.c5485d7a.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "https://ajewe.github.io/react-todo/build/static/static/media/logo.5d5d9eef.svg"
+    "main.css": "https://github.com/ajewe/react-todo/raw/master/build/static/css/main.a11e4d6b.chunk.css",
+    "main.js": "https://github.com/ajewe/react-todo/raw/master/build/static/js/main.265a70b5.chunk.js",
+    "main.js.map": "https://github.com/ajewe/react-todo/raw/master/build/static/js/main.265a70b5.chunk.js.map",
+    "runtime-main.js": "https://github.com/ajewe/react-todo/raw/master/build/static/js/runtime-main.a357eff4.js",
+    "runtime-main.js.map": "https://github.com/ajewe/react-todo/raw/master/build/static/js/runtime-main.a357eff4.js.map",
+    "static/js/2.c5485d7a.chunk.js": "https://github.com/ajewe/react-todo/raw/master/build/static/js/2.c5485d7a.chunk.js",
+    "static/js/2.c5485d7a.chunk.js.map": "https://github.com/ajewe/react-todo/raw/master/build/static/js/2.c5485d7a.chunk.js.map",
+    "index.html": "https://github.com/ajewe/react-todo/raw/master/build/index.html",
+    "precache-manifest.36c084c05c6a64dc01ac671ba119c6c8.js": "https://github.com/ajewe/react-todo/raw/master/build/precache-manifest.36c084c05c6a64dc01ac671ba119c6c8.js",
+    "service-worker.js": "https://github.com/ajewe/react-todo/raw/master/build/service-worker.js",
+    "static/css/main.a11e4d6b.chunk.css.map": "https://github.com/ajewe/react-todo/raw/master/build/static/css/main.a11e4d6b.chunk.css.map",
+    "static/js/2.c5485d7a.chunk.js.LICENSE.txt": "https://github.com/ajewe/react-todo/raw/master/build/static/js/2.c5485d7a.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "https://github.com/ajewe/react-todo/raw/master/build/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8e5da75.js",
+    "static/js/runtime-main.a357eff4.js",
     "static/js/2.c5485d7a.chunk.js",
     "static/css/main.a11e4d6b.chunk.css",
-    "static/js/main.c3a547e2.chunk.js"
+    "static/js/main.265a70b5.chunk.js"
   ]
 }
